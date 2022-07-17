@@ -26,7 +26,7 @@ class Currency extends Model
     protected function Value(): Attribute
     {
         return Attribute::make(
-            get: fn($value) => number_format(1/$value, 3, ",", ".")
+            get: fn($value) => number_format(1/$value, 3, ",", "."),
         );
     }
 }
