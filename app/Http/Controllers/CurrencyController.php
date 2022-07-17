@@ -3,9 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Currency;
-use Carbon\Carbon;
-use GuzzleHttp\Promise\Utils;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
 class CurrencyController extends Controller
@@ -15,7 +12,7 @@ class CurrencyController extends Controller
         $response = Http::get("https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/brl.json")->object();
 
         foreach ($response->brl as $key => $value) {
-            Currency::firstOrCreate(
+            Currency::updateOrCreate(
                 ["name" => $key],
                 ["value" => $value]
             );
