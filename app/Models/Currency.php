@@ -22,4 +22,11 @@ class Currency extends Model
             get: fn ($value) => Carbon::createFromFormat("Y-m-d H:i:s", $value)->format("d/m/Y"),
         );
     }
+
+    protected function Value(): Attribute
+    {
+        return Attribute::make(
+            get: fn($value) => number_format(1/$value, 3, ",", ".")
+        );
+    }
 }
