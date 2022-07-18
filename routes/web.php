@@ -16,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [CurrencyController::class, "index"]);
 
-Route::get('/currency/{currency}', [CurrencyController::class, "show"]);
+Route::get('/currency/{currency:name}', [CurrencyController::class, "show"]);
 
 Route::get('/sync', [CurrencyController::class, "upsert"]);
