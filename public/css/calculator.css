@@ -1,0 +1,58 @@
+#calculator{
+    color: var(--black);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#calculator input,
+#calculator select{
+    box-sizing: border-box;
+}
+
+#calculator-content{
+    border: 1px solid var(--gray);
+    border-radius: 8px;
+}
+
+#calculator-tittle{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2rem;
+}
+
+#caption{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+}
+
+#amount{
+    outline: none;
+}
+
+#calculate-btn{
+    border-radius: 4px;
+    padding: .8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+#calculate-btn:hover{
+    background-color: var(--dark-orange);
+    cursor: pointer;
+}
+
+#amount,
+.form-control{
+    background-color: var(--white);
+    border: 1px solid var(--gray);
+    padding: .5rem;
+}
+
+.result{
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 1rem;
+    border: 1px solid var(--gray);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
