@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{asset("css/app.css")}}">
     <link rel="stylesheet" href="{{asset("css/navbar.css")}}">
     <title>@stack('title')</title>
+    @stack('styles')
 </head>
 <body>
     <x-navbar :currencies="$currencies" />
