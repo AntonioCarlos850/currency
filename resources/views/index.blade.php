@@ -10,5 +10,6 @@
 @endpush
 
 @section('content')
+    <x-topbar :currencies="$currencies" />
     <x-calculator :javascript="$currency_javascript_format" :currencies="$currencies" />
 @endsection
