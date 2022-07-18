@@ -19,6 +19,12 @@ body{
     overflow-x: hidden;
 }
 
+#navbar a{
+    width: 100%;
+    padding: .5rem 0;
+    background-color: var(--white);
+}
+
 ::-webkit-scrollbar{
     /* width: .9rem; */
 }
