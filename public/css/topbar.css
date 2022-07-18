@@ -1,7 +1,10 @@
 #nav-currency{
-    padding-left: 1.4rem;
     background-color: var(--green);
+}
+
+#nav-currency a{
     color: var(--yellow);
+    text-decoration: none;
 }
 
 #nav-currency .name{
