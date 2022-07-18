@@ -1,7 +1,5 @@
-<div id="nav-currency" class="swiper">
-    <div class="swiper-wrapper">
-        @foreach ($currencies as $currency)
-            <x-slide-item :currency="$currency" />
-        @endforeach
-    </div>
+<div id="navbar" class="row w-100 center">
+    <a href="{{route('index')}}">
+        <img src="{{asset('image/logo.png')}}" height="50">
+    </a>
 </div>
