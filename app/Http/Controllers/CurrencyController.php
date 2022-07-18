@@ -28,12 +28,19 @@ class CurrencyController extends Controller
      */
     public function index()
     {
+        if (!Currency::count()) {
+            $this->upsert();
+        }
+
         $currencies = cache()->remember("currencies", 20, function () {
             return Currency::all();
         });
 
+        $currency_javascript_format = $this->currencies_to_javascript_objet_format($currencies);
+
         return view("index", [
-            "currencies" => $currencies
+            "currencies" => $currencies,
+            "currency_javascript_format" => $currency_javascript_format,
         ]);
     }
 
@@ -45,6 +52,19 @@ class CurrencyController extends Controller
      */
     public function show(Currency $currency)
     {
-        return view("currency", compact($currency));
+        return view("currency", [
+            "currency" => $currency
+        ]);
+    }
+
+    private function currencies_to_javascript_objet_format($currencies) {
+        $return = [];
+        foreach ($currencies as $currency) {
+            $return[$currency->name] = [
+                "value" => $currency->getAttributes()['value']
+            ];
+        }
+
+        return $return;
     }
 }
