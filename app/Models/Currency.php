@@ -19,7 +19,7 @@ class Currency extends Model
     protected function UpdatedAt(): Attribute
     {
         return Attribute::make(
-            get: fn ($value) => Carbon::createFromFormat("Y-m-d H:i:s", $value)->format("d/m/Y"),
+            get: fn ($value) => (new Carbon($value))->format("d/m/Y")
         );
     }
 
@@ -27,6 +27,13 @@ class Currency extends Model
     {
         return Attribute::make(
             get: fn($value) => number_format(1/$value, 3, ",", "."),
+        );
+    }
+
+    protected function Name(): Attribute
+    {
+        return Attribute::make(
+            get: fn($value) => strtoupper($value),
         );
     }
 }
