@@ -275,6 +275,18 @@ body{
         display: none !important;
     }
 
+    .mb-sm-1{
+        margin-bottom: 1rem;
+    }
+
+    .mb-sm-2{
+        margin-bottom: 2rem;
+    }
+
+    .mt-sm-1{
+        margin-top: 1rem;
+    }
+
     .col-mb-1{
         -ms-flex: 0 0 10%;
         flex: 0 0 10%;
@@ -345,6 +357,11 @@ body{
 @media screen and (min-width: 1000px){
     .p-dt-1{
         padding: 1rem;
+    }
+
+    .my-dt-2{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 
     .pt-dt-5{
